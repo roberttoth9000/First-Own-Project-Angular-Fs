@@ -7,8 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/roberttoth9000/First-Own-Project-Angular-Fs.git"
+    "db-migrate": "node node_modules/db-migrate/bin/db-migrate",
+    "start": "node dist/src/app.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc -p .",
+    "test": "jest",
+    "test-watch": "jest --watch"
   },
   "keywords": [],
   "author": "",

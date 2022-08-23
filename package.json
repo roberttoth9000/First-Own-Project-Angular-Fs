@@ -4,15 +4,16 @@
   "description": "Greenn Fox final individual project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
     "db-migrate": "node node_modules/db-migrate/bin/db-migrate",
     "start": "node dist/src/app.js",
-    "dev": "nodemon src/index.ts",
+    "dev": "nodemon src/app.ts",
     "build": "tsc -p .",
     "test": "jest",
     "test-watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roberttoth9000/First-Own-Project-Angular-Fs.git"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,8 @@
   },
   "homepage": "https://github.com/roberttoth9000/First-Own-Project-Angular-Fs#readme",
   "dependencies": {
+    "db-migrate": "^0.11.13",
+    "db-migrate-mysql": "^2.2.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mysql": "^2.18.1"

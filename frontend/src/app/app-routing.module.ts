@@ -5,8 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./modules/pages/registration/registration.module').then(
-        (mod) => mod.RegistrationModule
+      import('./modules/pages/landing-page/landing-page.module').then(
+        (mod) => mod.LandingPageModule
       ),
   },
   {

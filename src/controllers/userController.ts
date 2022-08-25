@@ -1,14 +1,17 @@
 import { NextFunction, Request, Response } from "express";
 import IRegisterUserRequest from "../models/IRegisterUserRequest";
+import IRegisterUserViewModel from "../models/viewModels/IRegisterUserViewModel";
 import { emailService } from "../services/emailService";
 import { passwordService } from "../services/passwordService";
+import { userService } from "../services/userService";
 
 export const userController = {
   async registerUser(
     req: Request<IRegisterUserRequest>,
-    res: Response<IRegisterUserRequest>,
+    res: Response<IRegisterUserViewModel>,
     next: NextFunction
   ) {
+    console.log("Helo");
     const newRegistration: IRegisterUserRequest = {
       username: req.body.username,
       email: req.body.email,
@@ -43,5 +46,19 @@ export const userController = {
         status: 422,
       });
     }
+
+    await userService
+      .registerUser(newRegistration)
+      .then(() => {
+        return res.json({
+          status: 202,
+          message: "Registration was successful",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        next(err);
+        return;
+      });
   },
 };

@@ -5,18 +5,17 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.modules';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './modules/pages/registration/registration.component';
-import { LandingPageComponent } from './modules/pages/landing-page/landing-page.component';
-// import { HeaderComponent } from './shared/components/header/header.component';
-// import { FooterComponent } from './shared/components/footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, RegistrationComponent, LandingPageComponent],
+  declarations: [AppComponent, RegistrationComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     SharedModule,
     AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,1 +1,40 @@
-<form [formGroup]="registerForm"></form>
+<form
+  class="registration-form"
+  [formGroup]="registerForm"
+  (ngSubmit)="onSubmit()"
+>
+  <h3>Registration</h3>
+  <label for="user-name"
+    >Username
+    <input
+      type="text"
+      matInput
+      id="username"
+      formControlName="username"
+      placeholder="Username"
+    />
+  </label>
+  <label for="email"
+    >E-mail
+    <input
+      type="text"
+      matInput
+      id="email"
+      formControlName="email"
+      placeholder="email"
+    />
+  </label>
+  <label for="user-name"
+    >Password
+    <input
+      type="text"
+      matInput
+      id="username"
+      formControlName="password"
+      placeholder="Username"
+    />
+  </label>
+  <button class="register-button" mat-flat-button type="submit">
+    Regisztráció
+  </button>
+</form>

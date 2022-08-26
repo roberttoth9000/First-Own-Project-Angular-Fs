@@ -1,10 +1,22 @@
 import { NextFunction, Request, Response } from "express";
 import { IBoardGameViewModel } from "../models/viewModels/IBoardGameViewModel";
+import { boardGameService } from "../services/boardGameService";
 
 export const boardGameController = {
   async getAllBoardgames(
-    req: Request,
-    res: Response<IBoardGameViewModel>,
+    _req: Request,
+    res: Response<IBoardGameViewModel[]>,
     next: NextFunction
-  ) {},
+  ) {
+    await boardGameService
+      .getAllBoardGames()
+      .then((data) => {
+        return res.json(data);
+      })
+      .catch((err) => {
+        console.log(err);
+        next(err);
+        return;
+      });
+  },
 };

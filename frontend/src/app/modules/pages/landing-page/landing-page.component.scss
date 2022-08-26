@@ -10,12 +10,28 @@
   #filter-container {
     width: 30%;
     height: 100%;
+    min-height: 500px;
     background-color: green;
   }
 
   #content-container {
     width: 70%;
     height: 100%;
+    min-height: 500px;
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      margin: 16px;
+      font-size: larger;
+    }
+
+    .tiles-container {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

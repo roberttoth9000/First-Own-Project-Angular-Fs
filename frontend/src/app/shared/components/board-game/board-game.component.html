@@ -1,1 +1,73 @@
-<p>board-game works!</p>
+<div class="bg-container">
+  <div class="bg-title-container">
+    <h2 class="bg-title">{{ boardGameData.title }}</h2>
+  </div>
+  <div class="image-description-container">
+    <div class="bg-image-container">
+      <div class="image-placeholder"></div>
+    </div>
+    <div class="bg-description-container">
+      <div class="bg-description">{{ boardGameData.description }}</div>
+    </div>
+  </div>
+  <div class="bg-information-container">
+    <div class="information-pair">
+      <div class="information-name">
+        Ár:
+        <div class="information-answer">{{ boardGameData.price }}</div>
+      </div>
+    </div>
+    <div class="information-pair">
+      <div class="information-name">
+        Csere:
+        <div class="information-answer">{{ boardGameData.exchange }}</div>
+      </div>
+    </div>
+    <div class="information-pair">
+      <div class="information-name">
+        Kategória:
+        <div class="information-answer">{{ boardGameData.type }}</div>
+      </div>
+    </div>
+    <div class="information-pair">
+      <div class="information-name">
+        Nehézség:
+        <div class="information-answer">
+          {{ boardGameData.difficulty }}
+        </div>
+      </div>
+    </div>
+    <div class="information-pair">
+      <div class="information-name">
+        Állapot:
+        <div class="information-answer">
+          {{ boardGameData.condition }}
+        </div>
+      </div>
+    </div>
+    <div class="information-pair">
+      <div class="information-name">
+        Játékos:
+        <div class="information-answer">
+          {{ boardGameData.player }}
+        </div>
+      </div>
+    </div>
+    <div class="information-pair">
+      <div class="information-name">
+        Életkor:
+        <div class="information-answer">
+          {{ boardGameData.age }}
+        </div>
+      </div>
+    </div>
+    <div class="information-pair">
+      <div class="information-name">
+        Időtartam:
+        <div class="information-answer">
+          {{ boardGameData.length }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

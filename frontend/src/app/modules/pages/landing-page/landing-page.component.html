@@ -3,7 +3,10 @@
   <div id="content-container">
     <div class="title">landing page title</div>
     <div class="tiles-container">
-      <app-board-game></app-board-game>
+      <app-board-game
+        *ngFor="let boardGame of BoardGames"
+        [boardGameData]="boardgame"
+      ></app-board-game>
     </div>
   </div>
 </div>

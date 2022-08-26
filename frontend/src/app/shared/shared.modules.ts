@@ -4,11 +4,12 @@ import { HeaderComponent } from './components/header/header.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
+import { BoardGameComponent } from './components/board-game/board-game.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, BoardGameComponent],
   imports: [CommonModule, RouterModule],
   providers: [],
-  exports: [HeaderComponent, FooterComponent],
+  exports: [HeaderComponent, FooterComponent, BoardGameComponent],
 })
 export class SharedModule {}

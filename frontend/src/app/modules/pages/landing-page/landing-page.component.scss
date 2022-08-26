@@ -1,0 +1,21 @@
+@import "../../../../styles/variable.scss";
+
+#main-page-container {
+  margin-top: $header-height;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 500px;
+
+  #filter-container {
+    width: 30%;
+    height: 100%;
+    background-color: green;
+  }
+
+  #content-container {
+    width: 70%;
+    height: 100%;
+    background-color: blue;
+  }
+}

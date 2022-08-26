@@ -1,5 +1,7 @@
+@import "../styles/variable.scss";
+
 #main {
-  min-height: 90vh;
+  min-height: calc(100vh - $footer-height - $header-height);
 
   margin-top: 300px;
 }

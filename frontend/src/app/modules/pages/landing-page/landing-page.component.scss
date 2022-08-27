@@ -29,9 +29,12 @@
     }
 
     .tiles-container {
-      margin-bottom: 16px;
       display: flex;
       flex-direction: column;
+
+      app-board-game {
+        margin-bottom: 16px;
+      }
     }
   }
 }

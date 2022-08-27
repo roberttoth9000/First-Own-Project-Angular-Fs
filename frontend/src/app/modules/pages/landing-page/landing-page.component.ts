@@ -9,14 +9,14 @@ import { BoardGameService } from 'src/app/core/services/board-game-service/board
   styleUrls: ['./landing-page.component.scss'],
 })
 export class LandingPageComponent implements OnInit {
-  BoardGameSubscription!: Subscription;
-  boardGames: IBoardGameViewModel[] = [];
+  boardGameSubscription!: Subscription;
+  public boardGames: IBoardGameViewModel[] = [];
 
   constructor(private boardGameService: BoardGameService) {}
 
   ngOnInit(): void {
     this.boardGameService.getAllBoardGame();
-    this.BoardGameSubscription =
+    this.boardGameSubscription =
       this.boardGameService.boardGameObservable$.subscribe(
         (boardGamesFromObservable: IBoardGameViewModel[]) => {
           this.boardGames = boardGamesFromObservable;
@@ -25,6 +25,6 @@ export class LandingPageComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    this.BoardGameSubscription.unsubscribe();
+    this.boardGameSubscription.unsubscribe();
   }
 }

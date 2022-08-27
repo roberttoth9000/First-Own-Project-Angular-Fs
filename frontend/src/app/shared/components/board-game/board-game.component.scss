@@ -21,6 +21,7 @@
     margin: 4px 0px 4px 16px;
 
     .bg-title {
+      color: white;
       margin-left: 16px;
     }
   }
@@ -36,6 +37,7 @@
     }
 
     .bg-description-container {
+      color: white;
       width: 70%;
       display: flex;
       justify-content: center;
@@ -56,6 +58,14 @@
       margin: 8px;
       display: flex;
       flex-direction: row;
+
+      color: $title-highlight-menta;
+
+      .information-answer {
+        color: white;
+        margin-left: 20px;
+        margin-right: 40px;
+      }
     }
   }
 }
